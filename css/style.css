@@ -1,0 +1,258 @@
+* {
+    transition: all 0.4s;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-style: normal;
+}
+header {
+    background-image: url(../img/header__background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.container {
+    max-width: 1312px;
+    padding: 0 20px 0 20px;
+    margin: 0 auto;
+}
+h2 {
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 87px;
+    color: #EA7A14;
+}
+h1 {
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 98px;
+    position: relative;
+    display: inline-block;
+}
+h1::after {
+    content: "";
+    width: 100%;
+    height: 8px;
+    background-color: white;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+.header__offer {
+    max-width: 995px;
+    margin: 37px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__offer p {
+    font-size: 24px;
+    line-height: 33px;
+    text-align: justify;
+    width: 594px;
+}
+.header__offer a {
+    font-size: 24px;
+    line-height: 33px;
+    text-transform: uppercase;
+    padding: 20px 32px;
+    color: white;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+}
+.header__offer a:hover {
+    color: black;
+    background-color: white;
+}
+.foto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Управляет шириной колонок сети */
+    grid-template-rows: repeat(3, 450px);
+}
+
+
+.item {
+    background-size: cover ;
+    background-position: center top;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item-peoples {
+    background-image: url(../img/people-bg.png);
+}
+.item-sities {
+    background-image: url(../img/sities-bg.png);
+    grid-column: span 2;
+}
+.item-nature {
+    background-image: url(../img/nature-bg.png);
+    grid-column: span 2;
+}
+.item-animals {
+    background-image: url(../img/animals-bg.png);
+}
+.item-traveling {
+    background-image: url(../img/travelling-bg.png);
+}
+.item-sport {
+    background-image: url(../img/sport-bg.png);
+    grid-column: span 2;
+}
+
+.wrapper {
+    background-color: black;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+}
+.item:hover .wrapper {
+    opacity: 0;
+}
+
+
+.item h3 {
+    color:white;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 49px;
+    z-index: 6;
+    position: relative;
+}
+.item h3::after {
+    content: '';
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    background-color: white;
+}
+
+
+.about_me {
+    background-color: #28262E;
+    padding: 80px 0;
+    text-align: center;
+}
+.about_me h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+}
+.about_me hr {
+    background: white;
+    height: 8px;
+    margin: 6px 0 48px 0;
+}
+.about_me p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.form {
+    background: #0A0A0EE3;
+    padding: 80px 0;
+}
+.form h2 {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 6px;
+}
+.form hr {
+    width: 100%;
+    height: 8px;
+    background-color: white;
+}
+form {
+    display: grid;
+    grid-template-areas:
+    'name-label email-label' /* 1 строка */
+    'name email' /*2 строка*/
+    'message-label.' /* 3 строка */
+    'message message'
+    'send.' 
+    ; /* Ставит элэменты в нужную часть сетки */
+    grid-gap: 20px;
+    margin-top: 64px;
+    grid-template-rows: minmax(auto, auto) 64px minmax(auto, auto) 302px 64px; /* Работает с высотой строк нашей сети  */
+}
+input, textarea {
+    padding: 0 13px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: white;
+    background: #3A3A3F;
+}
+input:focus, textarea:focus{
+    box-shadow: white 0 0 15px;
+}
+label {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+textarea {
+    padding: 13px;
+    resize:vertical ;
+}
+form button {
+    background-color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+form button:hover {
+    background: #3A3A3F;
+    color: white;
+    box-shadow: white 0 0 10px;
+    cursor: pointer;
+}
+#name-label {
+    grid-area: name-label;
+}
+#name {
+    grid-area: name;
+}
+#email-label {
+    grid-area: email-label;
+}
+#email {
+    grid-area: email;
+}
+#message-label {
+    grid-area: message-label;
+}
+#message {
+    grid-area: message;
+}
+#send {
+    grid-area: send;
+}
+
+footer {
+    background: #070707;
+    padding: 59px 0;
+    text-align: center;
+}
+footer p {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+}

@@ -1,0 +1,111 @@
+@media (max-width: 992px) {
+    h1 {
+        font-size: 54px;
+        line-height: 64px;
+    }
+    h2 {
+       font-size: 44px; 
+       line-height: 54px;
+    }
+    .header__offer {
+        flex-direction: column;
+    }
+    .header__offer p {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+    .foto {
+        grid-template-rows: repeat(3, 350px);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 38px;
+        line-height: 54px;
+    }
+    h2 {
+       font-size: 32px; 
+       line-height: 44px;
+    }
+    .header__offer p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .header__offer a {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .foto {
+        grid-template-rows: repeat(3, 250px);
+    }
+    .foto h3 {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: normal;
+    }
+    .foto h3::after {
+        height:2.5px;
+    }
+    footer p {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .about_me h2 {
+        font-size: 46px;
+        line-height: 54px;
+    }
+    .about_me hr {
+        height: 6px;
+        margin-bottom: 32px;
+    }
+    .about_me p {
+        font-size: 22px;
+        line-height: 34px;
+    }
+    .form hr {
+        height: 6px;
+    }
+    form {
+        grid-template-areas: 
+        'name-label'
+        'name'
+        'email-label'
+        'email'
+        'message-label'
+        'message'
+        'send'
+        ;
+        grid-template-rows: minmax(auto, auto) 64px minmax(auto, auto) 64px minmax(auto, auto) 302px 64px;
+        grid-template-columns: minmax(280px, auto);
+    }
+
+}
+
+@media (max-width: 426px) {
+    h1::after {
+        height: 4px;
+    }
+    .item {
+        grid-column: span 3;
+    }
+    .foto {
+        grid-template-rows: repeat(6, 200px);
+    }
+    footer {
+        padding: 36px 0;
+    }
+    footer p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 34px;
+        line-height: 38px;    
+    }
+
+}
